@@ -1,0 +1,152 @@
+<!-- 文档类型为HTMl -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- 字符集为UTF-8 -->
+  <meta charset="UTF-8">
+  <!-- 设置浏览器兼容性 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>文件名文件名</title>
+  <!-- 内联样式
+  <style>
+    h1{
+      color:black;
+    }
+  </style> -->
+
+  <!-- 外联方式 -->
+  <link rel="stylesheet" href="./study.css">
+</head>
+
+<body>
+  <!-- 图片标签为 img
+  src:url图片资源路径
+  width:percent/px
+  height:percent/px -->
+  <img src=".\logo.jpg" width="10%" height="10%"> <a href="https://www.bilibili.com/" target="_self">bilibili</a>
+
+  <!-- 行内方式
+  <h1 style="color: black;">the whole title</h1> -->
+  <h1>the whole title</h1>
+
+  <hr>
+  <span class="cls" id="time">2024.1.24 13:14</span> <span class="cls"> <a href="https://www.baidu.com/"
+      target="_blank">baidu</a></span>
+  <hr>
+
+  <!-- 超链接为 a -->
+  <!-- a标签
+  href:指定资源访问的url
+  target:指定在何处打开资源链接
+  _self:默认值,当前页面
+  _blank:在空白页面打开 -->
+
+
+
+  <!-- 视频标签为 video -->
+  <!-- src:资源
+    controls:显示播放的控件
+    width
+    height -->
+  <video src="video.mp4" controls width="20%"></video>
+
+
+  <!-- 音频标签为 audio -->
+  <!-- src:资源
+    controls:显示播放的控件 -->
+
+  <!-- 段落标签 p -->
+  <p>
+    这是一个段落
+  </p>
+  <!-- 文本加粗 b / strong -->
+
+  <!-- 无语义 div
+  一行一个 可以设置宽高 -->
+
+  <!-- 无语义 span
+  一行多个 不可以设置行高 -->
+  <div>
+    这是一个盒子
+  </div>
+
+  <!-- 表格标签 table
+行 tr
+单元格 td 
+表头 th-->
+
+  <table border="1px" cellspacing="0" width="600px">
+    <tr>
+      <th>number</th>
+      <th>logo</th>
+      <th>name</th>
+      <th>company</th>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>B</td>
+      <td>babel</td>
+      <td>Book</td>
+    </tr>
+  </table>
+
+  <!-- 表单标签 form -->
+  <!-- 表单项 
+  input 输入
+    type
+      text
+      password
+      radio单选按钮
+      checkbox复选框
+      file文件上传
+      date/time/datetime-local
+      number
+      email
+      hidden
+      submit/reset/button 按钮
+  select 下拉列表 option 定义列表项
+  textarea 定义文本
+  属性
+  action 发送地址
+  method 发送方式 -->
+
+  <form action="" method="get">
+
+    name:<input type="text" name="username">
+    age:<input type="text" name="age">
+    degree:<select name="degree">
+      <option value="">---option---</option>
+      <option value="1">bachelor</option>
+      <option value="2">master</option>
+
+    </select>
+
+    <input type="submit" value="submit">
+  </form>
+
+  <!-- 内部脚本 <script> -->
+  <!-- <script>
+    // 可以在任意位置放置
+    alert('Hello');
+  </script> -->
+
+  <!-- 外部脚本 -->
+
+  <p class="writer">Lin</p>
+
+  <!-- 事件绑定 -->
+  <!-- <input type="button" onlick="on()" value="botton1">
+  <script>
+    function on() {
+      alert("'be clicked'");
+    }
+  </script> -->
+  <input type="button" id="btn" value="botton2">
+  <Script src="study.js"></Script>
+
+</body>
+
+</html>
+
+<!-- {{{{content}padding}border}margin} -->

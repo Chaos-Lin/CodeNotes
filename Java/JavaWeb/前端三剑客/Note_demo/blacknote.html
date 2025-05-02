@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Note</title>
+  <link rel="stylesheet" type="text/css" href="./index.css" />
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+
+<body>
+  <!-- 主体区域 -->
+  <section id="todoapp">
+    <!-- 输入框 -->
+    <header class="header">
+      <h1>BlackNote</h1>
+      <input v-model="inputValue" @keyup.enter="add" autofocus="autofocus" autocomplete="off" placeholder="请输入任务"
+        class="new-todo" />
+      <!-- autofocus="autofocus"：这是HTML的autofocus属性，用于在页面加载时自动将焦点设置到该输入框上，使用户可以直接输入内容。
+        autocomplete="off"：这是HTML的autocomplete属性，用于禁用输入框的自动完成功能。
+        placeholder="请输入任务"：这是输入框的占位符文本，当输入框中没有内容时显示该文本。 -->
+    </header>
+    <!-- 列表区域 -->
+    <section class="main">
+      <ul class="todo-list">
+        <li class="todo" v-for="(item,index) in list">
+
+          <div class="view">
+            <span class="index">{{ index+1 }}.</span>
+            <label>{{ item }}</label>
+            <button class="destroy" @click="remove(index)"></button>
+          </div>
+
+        </li>
+      </ul>
+    </section>
+
+    <!-- 统计和清空 -->
+    <footer class="footer">
+      <span class="todo-count" v-if="list.length!=0">
+        <strong>{{list.length}}</strong> items left
+      </span>
+      <button v-show="list.length!=0" class="clear-completed" @click="clear">
+        Clear
+      </button>
+    </footer>
+  </section>
+  <!-- 底部 -->
+
+  <script src="blacknote.js"></script>
+
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+
+<body>
+  <div id="app">
+    <!-- 特殊数据类型——字典和数组的访问方式 -->
+    <!-- <h2>{{school.name}}</h2>
+    <h3>{{campus[0]}}</h3> -->
+
+    <!-- 本地应用 -->
+    <!-- v-text -->
+    <h2 v-text="message"></h2>
+    <h2> {{message}}</h2>
+
+    <!-- v-html -->
+    <p v-html="content"></p>
+
+    <!-- v-on -->
+    <input type="button" value="事件绑定1" @click="func">
+    <input type="button" value="事件绑定2" v-on:click="func">
+
+    <!-- 事件：click、mouseenter、dbclick -->
+
+    <!-- v-show -->
+    <img src="logo.jpg" v-show="isShow">
+
+    <!-- v-if -->
+    <p v-if="isShow">switch</p>
+    <input type="button" value="switch" @click="stc">
+
+    <!-- v-bind -->
+    <!-- 元素一般写在括号内部 -->
+    <a v-bind:href="website">website</a>
+
+    <!-- v-model -->
+    <!-- 双向数据bind -->
+    <input type="text" v-model="url">
+    <div>{{url}}</div>
+
+    <!-- v-for -->
+    <ul>
+      <li v-for="(item,index) in arr">{{index}}:{{item}}</li>
+    </ul>
+
+
+
+
+
+
+
+
+  </div>
+
+  <script>
+    new Vue({
+      el: "#app",
+      data: {
+        message: "I like CS",
+        content: "<a href='#'>linklink</a>",
+        url: "https://www.baidu.com",
+        school: {
+          name: "lin",
+          mobile: "12345"
+
+        },
+        campus: ["paking", "shnaghai", "guangzhou"],
+        isShow: false,
+        website: "www.bilibili.com",
+        arr: ["lin", "xuan", "chao"]
+      },
+      methods: {
+        func: function () {
+          alert("be clicked")
+
+        },
+        stc: function () {
+          this.isShow = !this.isShow;
+        },
+
+      }
+    })
+  </script>
+
+
+
+
+</body>
+
+</html>

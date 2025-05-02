@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="axios.js"></script>
+</head>
+
+<body>
+  <input type="button" value="get infomation" onclick="getData()">
+
+  <div id="divl"></div>
+</body>
+
+
+<script>
+  Ajax
+  function getData() {
+    //创建XMLHttpRequest
+    var XmlHttpRequest = new XMLHttpRequest();
+
+    //发送异步请求
+    XmlHttpRequest.open('GET', 'http://yapi.smart-xwork.cn/mock/169327/emp/list');
+    XmlHttpRequest.send();
+
+
+    //获取服务响应数据
+    XmlHttpRequest.onreadystatechange = function () {
+      if (XmlHttpRequest.readyState == 4 && XmlHttpRequest.status == 200) {
+        document.getElementById('divl').innerHTML = XmlHttpRequest.responseText;
+      }
+    }
+  }
+
+</script>
+
+</html>

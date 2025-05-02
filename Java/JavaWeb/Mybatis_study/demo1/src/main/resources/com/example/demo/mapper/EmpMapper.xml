@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- namespace是与全类型相同的接口 -->
+<mapper namespace="com.example.demo.mapper.EmpMapper">
+    <!-- id是接口中的函数的名字 -->
+    <!--    返回类型是单条语句的类型-->
+    <select id="pageLimit" resultType="com.example.demo.pojo.Emp">
+        SELECT * from emp
+        <where>
+            <if test="name != null">
+                name like concat('%',#{name},'%')
+            </if>
+            <if test="gender !=null">
+                gender = #{gender}
+            </if>
+            <if test="begin!=null and end !=null">
+                entrydate bwtween #{begin} and #{end}
+            </if>
+        </where>
+        order by update_time desc
+    </select>
+</mapper>

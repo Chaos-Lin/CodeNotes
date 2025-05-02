@@ -1,0 +1,52 @@
+/* w3school.com.cn/index.html */
+
+
+h1 {
+  color: rgb(80, 80, 80);
+}
+
+span {
+  color: darkcyan;
+  font-size: large;
+}
+
+/* 元素 */
+
+.cls {
+  color: #968D92;
+}
+
+/* .class属性 */
+
+#time {
+  color: cornflowerblue;
+}
+
+/* #id属性 */
+
+
+a {
+  color: #968D92;
+  text-decoration: none;
+}
+
+p {
+  text-indent: 50px;
+  /* 首行缩进 */
+}
+
+.writer {
+  text-align: right;
+  /* 对齐方式 */
+}
+
+div {
+  width: 200px;
+  height: 200px;
+  box-sizing: border-box;
+  background-color: cornflowerblue;
+
+  padding: 20px 20px 20px 20px;
+  border: 10px solid black;
+  margin: 30px 30px 30px 30px;
+}
